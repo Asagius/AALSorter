@@ -1,11 +1,7 @@
-//
-// Created by Asagius on 01.06.2021.
-//
-
 #ifndef AALSORTER_INPUT_H
 #define AALSORTER_INPUT_H
 
-#include <vector>;
+#include <vector>
 
 using namespace std;
 
