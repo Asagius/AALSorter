@@ -17,11 +17,11 @@ void Tester:: results() {
         cout.width(20);
         cout << basicOperations[i];
         cout.width(20);
-        //cout << improvedOperations[i];
+        cout << improvedOperations[i];
         cout.width(20);
-        cout << basicTime[i]<< endl;
+        cout << basicTime[i];
         cout.width(15);
-        //cout << improvedTime[i] << endl;
+        cout << improvedTime[i] << endl;
     }
 }
 
@@ -29,7 +29,7 @@ void Tester:: tests(int iterations, int size, int step)
 {
 
     BasicSorter bs(0);
-    //ImprovedSorter is(0);
+    ImprovedSorter is(0);
     Generator generator(120);
 
     vector<char> tab;
@@ -54,14 +54,15 @@ void Tester:: tests(int iterations, int size, int step)
         bs.setCounter(0);
 
 
-        /*t1 = std::chrono::high_resolution_clock::now();
+        t1 = std::chrono::high_resolution_clock::now();
         tab2 = is.sort(tab2);
+        bs.sort(tab2);
         t2 = std::chrono::high_resolution_clock::now();
         int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
         improvedTime.push_back(int_ms.count());
         int counter = is.getCounter() + bs.getCounter();
         improvedOperations.push_back(counter);
-        is.setCounter(0);*/
+        is.setCounter(0);
 
         /*t1 = std::chrono::high_resolution_clock::now();
         bs.setCounter(0);

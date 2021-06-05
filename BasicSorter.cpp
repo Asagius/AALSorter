@@ -58,7 +58,7 @@ vector<char> BasicSorter::sort(vector<char> shelf) {
 
         tmpCounter++;
 
-        if (tmpCounter == 1000)
+        if (tmpCounter == 100)
             break;
 
         if (i >= shelf.size())

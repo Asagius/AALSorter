@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Input.h"
 #include "BasicSorter.h"
-//#include "ImprovedSorter.h"
+#include "ImprovedSorter.h"
 #include "Tester.h"
 #include "Generator.h"
 
@@ -28,11 +28,11 @@ int main() {
     }
 
     BasicSorter bs(0);
-    //ImprovedSorter is(0);
-    bs.sort(temp1);
-    //is.sort(temp2);
-    return 0;
+    ImprovedSorter is(0);
+    //bs.sort(temp1);
+    //temp2= is.sort(temp2);
+    //bs.sort(temp2);
     Tester tester;
-    //tester.tests(10, 50, 0);
-    //tester.results();
+    tester.tests(10, 50, 0);
+    tester.results();
 }
