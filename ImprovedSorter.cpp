@@ -97,11 +97,9 @@ vector<char> ImprovedSorter::sort(vector<char> shelf) {
 
     cout << "Sort 2 done" << endl;
     for (int j = 0; j < shelf.size(); j++) {
-        cout << shelf[j] << " ";
-
-        if (j % 50 == 49)
-            cout << " " << endl;
+        cout << shelf[j] << " ";        
     }
+    cout << " " << endl;
     cout << "\n" << counter << " operations were performed" << endl;
     return shelf;
 }
