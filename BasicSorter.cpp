@@ -57,8 +57,8 @@ vector<char> BasicSorter::sort(vector<char> shelf) {
         cout << " " << endl;
 
         tmpCounter++;
-
-        if (tmpCounter == 100)
+        //cout << (shelf.size()-i)*4 << endl;
+        if (tmpCounter == (shelf.size()-i)*4)
             break;
 
         if (i >= shelf.size())

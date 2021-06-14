@@ -17,8 +17,8 @@ private:
 
 public:
     //Tester();
-    void tests(int iterations, int size);
-    void results();
+    void tests(int iterations, int size, int step);
+    void results(int size, int step);
 
 };
 

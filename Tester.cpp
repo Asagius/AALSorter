@@ -10,11 +10,13 @@ using namespace std;
 
 //Tester:: Tester(){}
 
-void Tester:: results() {
-    cout << "Basic operations:    " << "Improved operations:     " << "Basic time:   " << "Improved time:    " << endl;
+void Tester:: results(int size, int step) {
+    cout << "Size:    " << "Basic operations:    " << "Improved operations:     " << "Basic time:   " << "Improved time:    " << endl;
 
     for (int i = 0; i < basicTime.size(); i++) {
-        cout.width(20);
+        cout.width(8);
+        cout << size + i* step;
+        cout.width(21);
         cout << basicOperations[i];
         cout.width(25);
         cout << improvedOperations[i];
@@ -29,7 +31,7 @@ void Tester:: results() {
     }
 }
 
-void Tester:: tests(int iterations, int size)
+void Tester:: tests(int iterations, int size, int step)
 {
 
     BasicSorter bs(0);
@@ -43,7 +45,7 @@ void Tester:: tests(int iterations, int size)
 
     for(int i = 0; i < iterations; i++)
     {
-        generator.setShelf(size);
+        generator.setShelf(size + i*step);
         tab = generator.getShelf();
 
         //tab = {'K','Y','M','C','C','M','K','Y','C','M','Y','K','K','K','M','C'};
@@ -71,6 +73,7 @@ void Tester:: tests(int iterations, int size)
         improvedTime.push_back(int_ms.count());
         int counter = is.getCounter() + bs.getCounter();
         improvedOperations.push_back(counter);
+        bs.setCounter(0);
         is.setCounter(0);
 
         

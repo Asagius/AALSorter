@@ -239,6 +239,7 @@ int main(int argc, char *argv[]) {
 
     int iterations = atoi(argv[1]);
     int size = atoi(argv[2]);
+    int step = atoi(argv[3]);
 
     State initialState;
     Input input;
@@ -281,10 +282,10 @@ std::deque<std::pair<State, std::size_t>> moves;
     }
 
     Tester tester;
-    tester.tests(iterations, size);
+    tester.tests(iterations, size, step);
     cout << "Algorythms Basic and Improved: " << endl;
     cout << "Number of Iterations: " << iterations << "; Size of sequence: " << size << endl;
-    tester.results();
+    tester.results(size, step);
     cout << "Algorythm BFS: " << endl;
 
     std::cout << "number of steps = " << moves.size() << '\n';
